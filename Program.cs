@@ -23,6 +23,10 @@ namespace Homework1 {
                 Console.WriteLine("Error");
                 break;
             }
+
+            if(password < 100000){
+                Console.WriteLine("0"+password);
+            }
         }
     }
 }
