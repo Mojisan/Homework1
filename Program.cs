@@ -11,10 +11,9 @@ namespace Homework1 {
                 agency = Console.ReadLine();
                 switch(agency) {
                     case"CIA":
-                    if((int)password[2] >= 54 && (int)password[2] != 56) {
-                        if((int)password[4] != 49 && (int)password[4] != 51 && (int)password[4] != 53) {
-                           int pass = int.Parse(password);
-                           if(pass % 3 == 0) {
+                    if(((int)password[2] - 48) >= 6 && ((int)password[2] - 48) != 8) {
+                        if(((int)password[4] - 48) != 1 && ((int)password[4] - 48) != 3 && ((int)password[4] - 48) != 5) {
+                           if(((int)password[5] - 48) % 3 == 0) {
                             Console.WriteLine("True");
                            } else {
                             Console.WriteLine("False");
@@ -29,7 +28,21 @@ namespace Homework1 {
                     }
                     break;
                     case"FBI":
-                    Console.WriteLine("Hello FBI");
+                    if(((int)password[0] - 48) >= 4 && ((int)password[0] - 48) <= 7) {
+                        if(((int)password[3] - 48) % 2 == 0 && ((int)password[3] - 48) != 6) {
+                           if(((int)password[1] - 48) % 2 != 0) {
+                            Console.WriteLine("True");
+                           } else {
+                            Console.WriteLine("False");
+                           }
+                        }
+                        else {
+                            Console.WriteLine("False");
+                        }
+                    }
+                    else {
+                            Console.WriteLine("False");
+                    }
                     break;
                     case"NSA":
                     Console.WriteLine("Hello NSA");
