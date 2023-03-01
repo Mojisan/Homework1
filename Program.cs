@@ -13,7 +13,7 @@ namespace Homework1 {
                     case"CIA":
                     if((int)password[2] >= 54 && (int)password[2] != 56) {
                         if(password[4] != 49 && password[4] != 51 && password[4] != 53) {
-                           int pass = Convert.ToInt16(password);
+                           int pass = int.Parse(password);
                            if(pass % 3 == 0) {
                             Console.WriteLine("True");
                            } else {
