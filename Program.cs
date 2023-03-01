@@ -11,8 +11,22 @@ namespace Homework1 {
                 agency = Console.ReadLine();
                 switch(agency) {
                     case"CIA":
-                    Console.WriteLine("Hello CIA");
-                    Console.WriteLine(password[5]);
+                    if((int)password[2] >= 54 && (int)password[2] != 56) {
+                        if(password[4] != 49 && password[4] != 51 && password[4] != 53) {
+                           int pass = Convert.ToInt16(password);
+                           if(pass % 3 == 0) {
+                            Console.WriteLine("True");
+                           } else {
+                            Console.WriteLine("False");
+                           }
+                        }
+                        else {
+                            Console.WriteLine("False");
+                        }
+                    }
+                    else {
+                            Console.WriteLine("False");
+                    }
                     break;
                     case"FBI":
                     Console.WriteLine("Hello FBI");
