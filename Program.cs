@@ -2,31 +2,33 @@
 namespace Homework1 {
     class Program {
         static void Main(string[] args) {
-            int password;
-            string agency;
+            string agency, password;
             Console.Write("Password : ");
-            password = int.Parse(Console.ReadLine());
-            Console.Write("Agency : ");
-            agency = Console.ReadLine();
+            password = Console.ReadLine();
 
-            switch(agency) {
-                case"CIA":
-                Console.WriteLine("Hello CIA");
-                break;
-                case"FBI":
-                Console.WriteLine("Hello FBI");
-                break;
-                case"NSA":
-                Console.WriteLine("Hello NSA");
-                break;
-                default:
+            if(password.Length <= 6) {
+                Console.Write("Agency : ");
+                agency = Console.ReadLine();
+                switch(agency) {
+                    case"CIA":
+                    Console.WriteLine("Hello CIA");
+                    Console.WriteLine(password[5]);
+                    break;
+                    case"FBI":
+                    Console.WriteLine("Hello FBI");
+                    break;
+                    case"NSA":
+                    Console.WriteLine("Hello NSA");
+                    break;
+                    default:
+                    Console.WriteLine("Error");
+                    break;
+                }
+            }
+            else {
                 Console.WriteLine("Error");
-                break;
             }
 
-            if(password < 100000){
-                Console.WriteLine("0"+password);
-            }
         }
     }
 }
