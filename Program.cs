@@ -12,7 +12,7 @@ namespace Homework1 {
                 switch(agency) {
                     case"CIA":
                     if((int)password[2] >= 54 && (int)password[2] != 56) {
-                        if(password[4] != 49 && password[4] != 51 && password[4] != 53) {
+                        if((int)password[4] != 49 && (int)password[4] != 51 && (int)password[4] != 53) {
                            int pass = int.Parse(password);
                            if(pass % 3 == 0) {
                             Console.WriteLine("True");
